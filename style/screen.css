@@ -11,6 +11,7 @@ container > *
 #background
 {
 	z-index:9;
+	background:#F2F2F2;
 }
 
 #middleground
@@ -23,4 +24,13 @@ container > *
 {
 	display:none;
 	z-index:11;
+}
+
+#middleground > *
+{
+	width:950px;
+	margin:0 auto;
+	border:1px solid #eee;
+	background:white;
+	padding:5px 10px;
 }
