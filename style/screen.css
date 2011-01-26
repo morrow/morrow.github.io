@@ -19,6 +19,8 @@
 {
 	overflow:auto;
 	z-index:10;
+	padding-top:15px;
+	padding-bottom:15px;
 }
 
 #foreground
@@ -38,7 +40,7 @@
 
 #header, #footer
 {
-	height:30px;
+	height:25px;
 	background:white;
 }
 
@@ -49,12 +51,10 @@
 
 #footer
 {
-	border-bottom:1px solid #E7E7E7;
+	border-top:1px solid #E7E7E7;
 }
 
 #content
 {
 	background:white;
-	margin-top:15px;
-	margin-bottom:15px;
 }
