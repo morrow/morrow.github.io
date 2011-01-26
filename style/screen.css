@@ -31,9 +31,25 @@
 {
 	width:950px;
 	margin:0 auto;
-	border:1px solid #ddd;
+	border:1px solid #E6E6E6;
 	background:white;
 	padding:10px;
+}
+
+#header, #footer
+{
+	height:30px;
+	background:white;
+}
+
+#header
+{
+	border-bottom:1px solid #E7E7E7;
+}
+
+#footer
+{
+	border-bottom:1px solid #E7E7E7;
 }
 
 #content
