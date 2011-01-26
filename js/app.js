@@ -12,6 +12,9 @@ $("a").live("click", function(e){
       e.cancelBubble = true;
       e.returnValue = false;
     }
-    console.log(_href);
+    $.get(_href, function(r)
+    {
+      $("body").html(r);
+    })
   }
 });
