@@ -6,6 +6,7 @@ container > *
 	right:0px;
 	bottom:0px;
 	overflow:hidden;
+	background:transparent;
 }
 
 #background
@@ -33,4 +34,9 @@ container > *
 	border:1px solid #eee;
 	background:white;
 	padding:5px 10px;
+}
+
+#content
+{
+	margin:15px 0px;
 }
