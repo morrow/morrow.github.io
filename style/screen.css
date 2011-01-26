@@ -1,4 +1,4 @@
-container > *
+#container > *
 {
 	position:absolute;
 	top:0px;
@@ -38,6 +38,7 @@ container > *
 
 #content
 {
+	background:white;
 	margin-top:15px;
 	margin-bottom:15px;
 }
