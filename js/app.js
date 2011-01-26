@@ -1,6 +1,6 @@
 $("a").live("click", function(e){
   var _href = $(this).attr("href");
-  if(_.intersect(window.location.host, _href))
+  if(_href.match(window.location.host) || _href[0] == "/")
   {
     if(e["stopPropagation"] && e["preventDefault"])
     {
