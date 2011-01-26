@@ -1,6 +1,7 @@
 ul.hl li
 {
 	display:inline-block;
+	margin-right:10px;
 }
 
 #container > *
