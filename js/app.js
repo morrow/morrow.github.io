@@ -1,3 +1,4 @@
+// bind Links
 $("a").live("click", function(e){
   var _href = $(this).attr("href");
   if(_href.match(window.location.host) || _href[0] == "/")
@@ -12,7 +13,7 @@ $("a").live("click", function(e){
       e.cancelBubble = true;
       e.returnValue = false;
     }
-    if(!(_href.find(".htm")))
+    if(!(_href.match(".htm")))
     {
       _href += ".html";
     }
@@ -22,3 +23,14 @@ $("a").live("click", function(e){
     })
   }
 });
+
+
+// update href
+if(window.location.hash && window.location.hash[0] == "!")
+{
+  $.get(window.location.hash.split("!")[1], function(r)
+  {
+    $("body").html(r);
+    window.location.a
+  });
+}
