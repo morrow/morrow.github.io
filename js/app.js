@@ -12,6 +12,10 @@ $("a").live("click", function(e){
       e.cancelBubble = true;
       e.returnValue = false;
     }
+    if(!(_href.find(".htm")))
+    {
+      _href += ".html";
+    }
     $.get(_href, function(r)
     {
       $("body").html(r);
