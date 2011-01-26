@@ -1,13 +1,17 @@
 $("a").live("click", function(e){
-  if(e["stopPropagation"] && e["preventDefault"])
+  var _href = $(this).attr("href");
+  if(_.interesect(window.location.host, _href))
   {
-    e.stopPropagation();
-    e.preventDefault();
+    if(e["stopPropagation"] && e["preventDefault"])
+    {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    else
+    {
+      e.cancelBubble = true;
+      e.returnValue = false;
+    }
+    console.log(_href);
   }
-  else
-  {
-    e.cancelBubble = true;
-    e.returnValue = false;
-  }
-  console.log($(this).attr("href"));
 });
