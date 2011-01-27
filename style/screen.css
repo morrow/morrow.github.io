@@ -99,7 +99,8 @@ a:hover
 #links li:before
 {
 	display:inline-block;
-	content: " ⚫ ";
+	content: " | ";
+	padding-right:5px;
 }
 #links li:first-child:before
 {
