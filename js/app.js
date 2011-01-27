@@ -91,4 +91,6 @@ $(document).ready(function(){
 	{
 	load("/home")	;
 	}
+	$("body").bind(""
+	)
 });
