@@ -21,7 +21,7 @@ var load = function(url)
       "url":url,
       success: function(r) {
         $("#content").html(r);
-        $("#navigation-current").html('<a href="'+uri.current+'">'+uri.display+'</a>')
+        $("#navigation-current").html('<li><a href="'+uri.current+'">'+uri.display+'</a></li>')
       },
       error: function(r)
       {
