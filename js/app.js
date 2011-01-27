@@ -27,11 +27,11 @@ var load = function(url)
 	{
 		window.location.hash = "!" + url.split(".html")[0];
 	}
+	uri.current = url;
 	if(!(url.match(".html")))
 	{
 		url += ".html";
 	}
-	uri.current = url;
 	console.log("/static" + url)
 	$.ajax(
 	{
