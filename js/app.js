@@ -17,7 +17,7 @@ var load = function(url)
 			window.history.replaceState({id:uri.display}, uri.display, uri.display);
 
 		}
-		else
+		else if(url != uri.history[uri.history.length - 1])
 		{
 			window.history.pushState({id:uri.display}, uri.display, uri.display);	
 			uri.history.push(url);
@@ -79,17 +79,15 @@ $(document).ready(function(){
 	if("pushState" in window.history)
 	{
 		window.onpopstate = function(e){
-			console.log(e);
-			load(window.location.href.split(window.location.host)[1]);
+			load(e.state.id);
 		};
 	}
 	else
 	{
-		window.onhashchange = function()
-		{
+		window.onhashchange = function(){
 			if(uri.current != window.location.hash.split("#!")[1]){
 				load(window.location.hash.split("#!")[1]);
 			}
-		}
+		};
 	}
 });
