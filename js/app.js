@@ -79,7 +79,14 @@ $(document).ready(function(){
 	if("pushState" in window.history)
 	{
 		window.onpopstate = function(e){
-			load(e.state.id);
+			if("state" in e && "id" in e.state)
+			{
+				load(e.state.id);
+			}
+			else
+			{
+				load(window.location.href.split(window.location.host)[1]);				
+			}
 		};
 	}
 	else
