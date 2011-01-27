@@ -52,7 +52,7 @@ $("a").live("click", function(e){
 });
 
 $(document).ready(function(){
-	load(window.location.hash.split("#!")[1]);
+	load("/home");
 	if(window.location.hash)
 	{
 		load(window.location.hash.split("#!")[1]);
