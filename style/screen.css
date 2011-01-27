@@ -72,7 +72,7 @@ a:hover
 
 #header a, #footer a
 {
-	color:inherit !important;
+	color:inherit;
 }
 
 #header:hover, #footer:hover
