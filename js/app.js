@@ -26,7 +26,7 @@ $("a").live("click", function(e){
 
 
 // update href
-if(window.location.hash && window.location.hash[0] == "!")
+if(window.location.hash && window.location.hash[1] == "!")
 {
   $.ajax(
     {
