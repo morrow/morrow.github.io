@@ -39,13 +39,19 @@ $("a").live("click", function(e){
   }
 });
 
-// update href
-if(window.location.hash && window.location.hash[1] == "!")
-{
-  load(window.location.hash.split("#!")[1]);
-}
-
 window.onhashchange = function()
 {
   load(window.location.hash.split("#!")[1])  ;
 }
+
+
+$(document).ready(function(){
+  if(window.location.hash && window.location.hash[1] == "!")
+  {
+    load(window.location.hash.split("#!")[1]);
+  }
+  else
+  {
+    load("/home")  ;
+  }
+});
