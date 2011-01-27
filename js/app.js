@@ -17,12 +17,12 @@ var load = function(url)
 	uri.display = uri.display.split(".html")[0]
 	if("pushState" in window.history)
 	{
-		console.log(url + "::" + uri.history[uri.history.length - 1]);
+		console.log(url + "::" + uri.history[uri.history.length - 2]);
 		if(window.location.hash && window.location.hash.length > 1)
 		{
 			window.history.replaceState({id:uri.display}, uri.display, uri.display);
 		}
-		else if(url != uri.history[uri.history.length - 1])
+		else if(url != uri.history[uri.history.length - 2])
 		{
 			window.history.pushState({id:uri.display}, uri.display, uri.display);
 			uri.history.push(url);
