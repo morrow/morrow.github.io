@@ -8,7 +8,7 @@ var uri = {
 // load
 var load = function(url)
 {
-	if(url[0] != "/")
+	if(url && url[0] != "/")
 	{
 		url = "/" + url;
 	}
@@ -21,7 +21,6 @@ var load = function(url)
 	{
 		url += ".html";
 	}
-	console.log("/static" + url);
 	$.ajax(
 	{
 		type:"GET",
