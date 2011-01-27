@@ -15,7 +15,7 @@ var load = function(url)
       },
       error: function(r)
       {
-        console.log(r);
+        $("#content").html('Error, page not found.');
       }
   });
 }
