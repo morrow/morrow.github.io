@@ -4,6 +4,19 @@ ul.hl li
 	margin-right:10px;
 }
 
+a
+{
+	color:black;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+
 #container > *
 {
 	position:absolute;
