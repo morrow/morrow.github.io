@@ -1,7 +1,13 @@
+var site = {
+  "current":"",
+};
+
 // load
 var load = function(url)
 {
-  if(!(url.match(".htm")))
+  window.location.hash = "!" + _href.split(".html")[0];
+  site.current = url.split("#!")[1];
+  if(!(url.match(".html")))
     {
       url += ".html";
     }
@@ -35,13 +41,16 @@ $("a").live("click", function(e){
       e.cancelBubble = true;
       e.returnValue = false;
     }
-    window.location.hash = "!" + _href.split(".html")[0];
+    load(_href);
   }
 });
 
 window.onhashchange = function()
 {
-  load(window.location.hash.split("#!")[1])  ;
+  if(site.current != window.location.hash.split("#!")[1])
+  {
+    load(window.location.hash.split("#!")[1]);
+  }
 }
 
 
