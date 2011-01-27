@@ -35,7 +35,7 @@ $("a").live("click", function(e){
     {
       _href += ".html";
     }
-    window.location.hash = _href.split(".html")[0];
+    window.location.hash = "!" + _href.split(".html")[0];
   }
 });
 
