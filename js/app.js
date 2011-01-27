@@ -74,6 +74,15 @@ window.onhashchange = function()
 	}
 }
 
+if("pushState" in window.history)
+{
+	window.onpopstate = function(e){
+		window.location.href.split(window.location.host)[1]	
+	};
+}
+
+
+
 
 $(document).ready(function(){
 	if(window.location.hash && window.location.hash[1] == "!")
