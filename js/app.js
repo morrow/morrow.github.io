@@ -2,7 +2,6 @@
 var uri = {
 	"current":"",
 	"display":"",
-	"history":[],
 };
 
 // load
@@ -10,7 +9,7 @@ var load = function(url)
 {
 	uri.display = url.split("#!")[1] || url;
 	uri.display = uri.display.split("/")[1] || uri.display;
-	uri.display = uri.display.split(".html")[0]
+	uri.display = uri.display.split(".html")[0];
 	window.location.hash = "!" + url.split(".html")[0];
 	uri.current = url;
 	if(!(url.match(".html")))
@@ -24,7 +23,7 @@ var load = function(url)
 		"url":"/static" + url,
 		success: function(r) {
 			$("#content").html(r);
-			$("#navigation-current").html('<li> / </li><li><a href="'+uri.display+'">'+uri.display+'</a></li>')
+			$("#navigation-current").html('<li> &rsquo; </li><li><a href="'+uri.display+'">'+uri.display+'</a></li>')
 		},
 		error: function(r)
 		{
