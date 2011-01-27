@@ -84,12 +84,3 @@ a:hover
 	background:white;
 	padding:10px;
 }
-
-#navigation li a:before
-{
-	content: " / ";
-}
-#navigation li:first-child a:before
-{
-	content: "" !important;
-}
