@@ -8,7 +8,6 @@ var uri = {
 // load
 var load = function(url)
 {
-	console.log(url);
 	uri.current = url;
 	uri.display = uri.current.split("#!")[1] || uri.current;
 	uri.display = uri.display.split("/")[1];
@@ -16,7 +15,7 @@ var load = function(url)
 	{
 		if(uri.history.indexOf(url) == uri.history.length - 1)
 		{
-			window.history.replaceState({id:uri}, uri, uri);
+			window.history.replaceState({id:url}, url, url);
 		}
 		else
 		{
