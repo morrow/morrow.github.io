@@ -1,3 +1,21 @@
+// load
+var load = function(url)
+{
+  $.ajax(
+    {
+      type:"GET",
+      dataType:"html",
+      "url":url,
+      success: function(r) {
+        $("#content").html(r);
+      },
+      error: function(r)
+      {
+        console.log(r);
+      }
+  });
+}
+
 // bind Links
 $("a").live("click", function(e){
   var _href = $(this).attr("href");
@@ -17,28 +35,17 @@ $("a").live("click", function(e){
     {
       _href += ".html";
     }
-    $.get(_href, function(r)
-    {
-      $("body").html(r);
-    })
+    load(_href);
   }
 });
-
 
 // update href
 if(window.location.hash && window.location.hash[1] == "!")
 {
-  $.ajax(
-    {
-      type:"GET",
-      dataType:"html",
-      "url":window.location.hash.split("!")[1],
-      success: function(r) {
-        $("body").html(r);
-      },
-      error: function(r)
-      {
-        console.log(r);
-      }
-  });
+  load(window.location.hash.split("#!")[1]);
+}
+
+window.onhashchange = function()
+{
+  load(window.location.hash.split("#!")[1])  ;
 }
