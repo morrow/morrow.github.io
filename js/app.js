@@ -8,14 +8,12 @@ var uri = {
 // load
 var load = function(url)
 {
-	uri.current = url;
-	uri.display = uri.current.split("#!")[1] || uri.current;
-	uri.display = uri.display.split("/")[1];
 	if("pushState" in window.history)
 	{
-		if(uri.history.indexOf(url) == uri.history.length - 2 || window.location.hash)
+		if(uri.history.indexOf(url) == uri.history.indexOf(uri.current) - 1 || window.location.hash)
 		{
 			window.history.replaceState({id:url}, url, url);
+
 		}
 		else
 		{
@@ -31,6 +29,9 @@ var load = function(url)
 	{
 		url += ".html";
 	}
+	uri.current = url;
+	uri.display = uri.current.split("#!")[1] || uri.current;
+	uri.display = uri.display.split("/")[1];
 	$.ajax(
 	{
 		type:"GET",
