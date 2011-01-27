@@ -19,7 +19,7 @@ var load = function(url)
 		}
 		else
 		{
-			window.history.pushState({id:url}, uri, url);	
+			window.history.pushState({id:url}, url, url);	
 			uri.history.push(url);
 		}
 	}
