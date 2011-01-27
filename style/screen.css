@@ -85,3 +85,11 @@ a:hover
 	padding:10px;
 }
 
+#navigation li:after
+{
+	content: " > ";
+}
+#navigation li:first-child:after
+{
+	content: "" !important;
+}

@@ -1,12 +1,14 @@
-var site = {
+var uri = {
   "current":"",
+  "display":"",
 };
 
 // load
 var load = function(url)
 {
   window.location.hash = "!" + _href.split(".html")[0];
-  site.current = url.split("#!")[1];
+  uri.current = url.split("#!")[1];
+  uri.display = uri.current;
   if(!(url.match(".html")))
     {
       url += ".html";
@@ -18,6 +20,7 @@ var load = function(url)
       "url":url,
       success: function(r) {
         $("#content").html(r);
+        $("#logo").after('<a href="/'+uri.current+'">'+uri.display+'</a>')
       },
       error: function(r)
       {
@@ -47,7 +50,7 @@ $("a").live("click", function(e){
 
 window.onhashchange = function()
 {
-  if(site.current != window.location.hash.split("#!")[1])
+  if(uri.current != window.location.hash.split("#!")[1])
   {
     load(window.location.hash.split("#!")[1]);
   }
