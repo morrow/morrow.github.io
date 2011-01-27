@@ -8,10 +8,6 @@ var uri = {
 // load
 var load = function(url)
 {
-	if(url && url[0] != "/")
-	{
-		url = "/" + url;
-	}
 	uri.display = url.split("#!")[1] || url;
 	uri.display = uri.display.split("/")[1] || uri.display;
 	uri.display = uri.display.split(".html")[0]
