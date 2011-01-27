@@ -68,28 +68,28 @@ $("a").live("click", function(e){
 	}
 });
 
-window.onhashchange = function()
-{
-	if(uri.current != window.location.hash.split("#!")[1])
-	{
-	load(window.location.hash.split("#!")[1]);
-	}
-}
-
-if("pushState" in window.history)
-{
-	window.onpopstate = function(e){
-		load(window.location.href.split(window.location.host)[1]);
-	};
-}
-
 $(document).ready(function(){
 	if(window.location.hash && window.location.hash[1] == "!")
 	{
-	load(window.location.hash.split("#!")[1]);
+		load(window.location.hash.split("#!")[1]);
 	}
 	else
 	{
-	load("/home");
+		load("/home");
+	}
+	if("pushState" in window.history)
+	{
+		window.onpopstate = function(e){
+			load(window.location.href.split(window.location.host)[1]);
+		};
+	}
+	else
+	{
+		window.onhashchange = function()
+		{
+			if(uri.current != window.location.hash.split("#!")[1]){
+				load(window.location.hash.split("#!")[1]);
+			}
+		}
 	}
 });
