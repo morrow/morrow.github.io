@@ -8,6 +8,7 @@ var uri = {
 // load
 var load = function(url)
 {
+	console.log(url);
 	uri.current = url;
 	uri.display = uri.current.split("#!")[1] || uri.current;
 	uri.display = uri.display.split("/")[1];
@@ -80,9 +81,6 @@ if("pushState" in window.history)
 		load(window.location.href.split(window.location.host)[1]);
 	};
 }
-
-
-
 
 $(document).ready(function(){
 	if(window.location.hash && window.location.hash[1] == "!")
