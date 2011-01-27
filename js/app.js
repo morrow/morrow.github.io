@@ -15,11 +15,11 @@ var load = function(url)
 	{
 		if(url in uri.history)
 		{
-			window.history.replaceState({id:uri}, title, uri);
+			window.history.replaceState({id:uri}, uri, uri);
 		}
 		else
 		{
-			window.history.pushState({id:url}, title, url);	
+			window.history.pushState({id:url}, uri, url);	
 			uri.history.push(url);
 		}
 	}
