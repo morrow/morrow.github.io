@@ -70,6 +70,11 @@ a:hover
 	color:#555;
 }
 
+#header a, #footer a
+{
+	color:inherit !important;
+}
+
 #header:hover, #footer:hover
 {
 	color:black;
