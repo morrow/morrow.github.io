@@ -89,8 +89,6 @@ $(document).ready(function(){
 	}
 	else
 	{
-	load("/home")	;
+	load("/home");
 	}
-	$("body").bind(""
-	)
 });
