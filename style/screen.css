@@ -100,7 +100,7 @@ a:hover
 {
 	display:inline-block;
 	content: " | ";
-	padding-right:5px;
+	padding-right:10px;
 }
 #links li:first-child:before
 {

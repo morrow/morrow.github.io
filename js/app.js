@@ -21,7 +21,7 @@ var load = function(url)
 		{
 			window.history.replaceState({id:uri.display}, uri.display, uri.display);
 		}
-		else if(uri.history.indexOf(url) != uri.history[uri.history.indexOf(url)])
+		else if(uri.history.indexOf(url) != uri.history.indexOf(uri.current))
 		{
 			window.history.pushState({id:uri.display}, uri.display, uri.display);
 			uri.history.push(url);
