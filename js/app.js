@@ -15,22 +15,7 @@ var load = function(url)
 	uri.display = url.split("#!")[1] || url;
 	uri.display = uri.display.split("/")[1] || uri.display;
 	uri.display = uri.display.split(".html")[0]
-	if("pushState" in window.history)
-	{
-		if(window.location.hash && window.location.hash.length > 1)
-		{
-			window.history.replaceState({id:uri.display}, uri.display, uri.display);
-		}
-		else if(uri.history.indexOf(url) != uri.history.indexOf(uri.current))
-		{
-			window.history.pushState({id:uri.display}, uri.display, uri.display);
-			uri.history.push(url);
-		}
-	}
-	else
-	{
-		window.location.hash = "!" + url.split(".html")[0];
-	}
+	window.location.hash = "!" + url.split(".html")[0];
 	uri.current = url;
 	if(!(url.match(".html")))
 	{
@@ -81,25 +66,9 @@ $(document).ready(function(){
 	{
 		load("/home");
 	}
-	if("pushState" in window.history)
-	{
-		window.onpopstate = function(e){
-			if(e && e.state && e.state.id)
-			{
-				load(e.state.id);
-			}
-			else
-			{
-				load(window.location.href.split(window.location.host)[1]);				
-			}
-		};
-	}
-	else
-	{
-		window.onhashchange = function(){
-			if(uri.current != window.location.hash.split("#!")[1]){
-				load(window.location.hash.split("#!")[1]);
-			}
-		};
-	}
+	window.onhashchange = function(){
+		if(uri.current != window.location.hash.split("#!")[1]){
+			load(window.location.hash.split("#!")[1]);
+		}
+	};
 });
