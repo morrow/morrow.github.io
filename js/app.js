@@ -6,7 +6,7 @@ var uri = {
 // load
 var load = function(url)
 {
-  window.location.hash = "!" + _href.split(".html")[0];
+  window.location.hash = "!" + url.split(".html")[0];
   uri.current = url.split("#!")[1];
   uri.display = uri.current;
   if(!(url.match(".html")))
