@@ -95,3 +95,12 @@ a:hover
 	background:white;
 	padding:10px;
 }
+
+#links li:before
+{
+	content: " - ";
+}
+#links li:first-child:before
+{
+	content:"" !important;	
+}
