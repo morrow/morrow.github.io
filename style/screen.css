@@ -99,7 +99,7 @@ a:hover
 #links li:before
 {
 	display:inline-block;
-	content: " - ";
+	content: " ⚫ ";
 }
 #links li:first-child:before
 {
