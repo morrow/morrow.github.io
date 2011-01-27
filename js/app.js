@@ -28,9 +28,17 @@ $("a").live("click", function(e){
 // update href
 if(window.location.hash && window.location.hash[0] == "!")
 {
-  $.get(window.location.hash.split("!")[1], function(r)
-  {
-    $("body").html(r);
-    window.location.a
+  $.ajax(
+    {
+      type:"GET",
+      dataType:"html",
+      "url":window.location.hash.split("!")[1],
+      success: function(r) {
+        $("body").html(r);
+      },
+      error: function(r)
+      {
+        console.log(r);
+      }
   });
 }
