@@ -9,7 +9,8 @@ var uri = {
 var load = function(url)
 {
 	uri.display = url.split("#!")[1] || url;
-	uri.display = uri.display.split("/")[1].split(".html")[0];
+	uri.display = uri.display.split("/")[1] || uri.display;
+	uri.display = uri.display.split(".html")[0]
 	if("pushState" in window.history)
 	{
 		if(window.location.hash)
@@ -79,7 +80,7 @@ $(document).ready(function(){
 	if("pushState" in window.history)
 	{
 		window.onpopstate = function(e){
-			if("state" in e && "id" in e.state)
+			if(e && "state" in e && "id" in e.state)
 			{
 				load(e.state.id);
 			}
