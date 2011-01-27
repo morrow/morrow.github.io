@@ -37,21 +37,22 @@ $("a").live("click", function(e){
 	var _href = $(this).attr("href");
 	if(_href.match(window.location.host) || _href[0] == "/")
 	{
-	if(e["stopPropagation"] && e["preventDefault"])
-	{
-		e.stopPropagation();
-		e.preventDefault();
-	}
-	else
-	{
-		e.cancelBubble = true;
-		e.returnValue = false;
-	}
-	load(_href);
+		if(e["stopPropagation"] && e["preventDefault"])
+		{
+			e.stopPropagation();
+			e.preventDefault();
+		}
+		else
+		{
+			e.cancelBubble = true;
+			e.returnValue = false;
+		}
+		load(_href);
 	}
 });
 
 $(document).ready(function(){
+	load(window.location.hash.split("#!")[1]);
 	if(window.location.hash)
 	{
 		load(window.location.hash.split("#!")[1]);
