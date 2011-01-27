@@ -80,7 +80,7 @@ $(document).ready(function(){
 	if("pushState" in window.history)
 	{
 		window.onpopstate = function(e){
-			if(e && "state" in e && "id" in e.state)
+			if(e && e.state && e.state.id)
 			{
 				load(e.state.id);
 			}
