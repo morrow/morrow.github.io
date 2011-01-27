@@ -14,7 +14,7 @@ var load = function(url)
 	uri.display = uri.display.split("/")[1];
 	if("pushState" in window.history)
 	{
-		if(url in uri.history)
+		if(uri.history.indexOf(url) > 0)
 		{
 			window.history.replaceState({id:uri}, uri, uri);
 		}
