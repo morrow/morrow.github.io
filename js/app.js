@@ -1,6 +1,10 @@
 // load
 var load = function(url)
 {
+  if(!(url.match(".htm")))
+    {
+      url += ".html";
+    }
   $.ajax(
     {
       type:"GET",
@@ -30,10 +34,6 @@ $("a").live("click", function(e){
     {
       e.cancelBubble = true;
       e.returnValue = false;
-    }
-    if(!(_href.match(".htm")))
-    {
-      _href += ".html";
     }
     window.location.hash = "!" + _href.split(".html")[0];
   }

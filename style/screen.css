@@ -1,3 +1,8 @@
+body
+{
+  font-family:'helvetica neue', helvetica, arial, sans-serif, sans;
+}
+
 ul.hl li
 {
 	display:inline-block;
