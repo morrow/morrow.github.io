@@ -20,11 +20,11 @@ var load = function(url)
 		if(window.location.hash && window.location.hash.length > 1)
 		{
 			window.history.replaceState({id:uri.display}, uri.display, uri.display);
-
 		}
+		console.log(url + "::" + uri.history[uri.history.length - 1]);
 		else if(url != uri.history[uri.history.length - 1])
 		{
-			window.history.pushState({id:uri.display}, uri.display, uri.display);	
+			window.history.pushState({id:uri.display}, uri.display, uri.display);
 			uri.history.push(url);
 		}
 	}
