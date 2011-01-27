@@ -52,6 +52,11 @@ $("a").live("click", function(e){
 });
 
 $(document).ready(function(){
+	window.onhashchange = function(){
+		if(uri.current != window.location.hash.split("#!")[1]){
+			load(window.location.hash.split("#!")[1]);
+		}
+	};
 	if(window.location.hash && window.location.hash.indexOf("#!") >= 0)
 	{
 		load(window.location.hash.split("#!")[1]);
@@ -60,9 +65,4 @@ $(document).ready(function(){
 	{
 		load("/home");
 	}
-	window.onhashchange = function(){
-		if(uri.current != window.location.hash.split("#!")[1]){
-			load(window.location.hash.split("#!")[1]);
-		}
-	};
 });
