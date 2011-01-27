@@ -33,6 +33,10 @@ var load = function(url)
 	{
 		url += ".html";
 	}
+	if(url[0] != "/")
+	{
+		url = "/" + url;
+	}
 	$.ajax(
 	{
 		type:"GET",
