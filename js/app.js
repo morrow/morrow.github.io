@@ -32,7 +32,6 @@ var load = function(url)
 	{
 		url += ".html";
 	}
-	console.log("/static" + url)
 	$.ajax(
 	{
 		type:"GET",
@@ -80,6 +79,7 @@ $(document).ready(function(){
 	if("pushState" in window.history)
 	{
 		window.onpopstate = function(e){
+			console.log(e);
 			load(window.location.href.split(window.location.host)[1]);
 		};
 	}
