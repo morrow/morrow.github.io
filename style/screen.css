@@ -64,8 +64,15 @@ a:hover
 
 #header, #footer
 {
+	font-size:12px;
 	height:20px;
 	background:white;
+	color:#555;
+}
+
+#header:hover, #footer:hover
+{
+	color:black;
 }
 
 #header
