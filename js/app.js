@@ -53,7 +53,7 @@ $("a").live("click", function(e){
 });
 
 $(document).ready(function(){
-	if(window.location.hash && window.location.hash[1] == "!")
+	if(window.location.hash)
 	{
 		load(window.location.hash.split("#!")[1]);
 	}
