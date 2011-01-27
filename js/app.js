@@ -8,6 +8,10 @@ var uri = {
 // load
 var load = function(url)
 {
+	if(url[0] != "/")
+	{
+		url = "/" + url;
+	}
 	uri.display = url.split("#!")[1] || url;
 	uri.display = uri.display.split("/")[1] || uri.display;
 	uri.display = uri.display.split(".html")[0]
@@ -32,10 +36,6 @@ var load = function(url)
 	if(!(url.match(".html")))
 	{
 		url += ".html";
-	}
-	if(url[0] != "/")
-	{
-		url = "/" + url;
 	}
 	$.ajax(
 	{
