@@ -6,9 +6,9 @@ var uri = {
 // load
 var load = function(url)
 {
-  window.location.hash = "!" + url.split(".html")[0];
   uri.current = url.split("#!")[1];
   uri.display = uri.current;
+  window.location.hash = "!" + url.split(".html")[0];
   if(!(url.match(".html")))
     {
       url += ".html";
@@ -20,7 +20,7 @@ var load = function(url)
       "url":url,
       success: function(r) {
         $("#content").html(r);
-        $("#logo").after('<a href="/'+uri.current+'">'+uri.display+'</a>')
+        $("#navigation-current").html('<a href="/'+uri.current+'">'+uri.display+'</a>')
       },
       error: function(r)
       {
