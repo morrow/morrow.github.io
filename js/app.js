@@ -8,6 +8,7 @@ var load = function(url)
 {
   uri.current = url;
   uri.display = uri.current.split("#!")[1] || uri.current;
+  uri.display = uri.display.split("/")[1];
   window.location.hash = "!" + url.split(".html")[0];
   if(!(url.match(".html")))
     {

@@ -85,11 +85,11 @@ a:hover
 	padding:10px;
 }
 
-#navigation li:after
+#navigation li:before
 {
-	content: " > ";
+	content: " / ";
 }
-#navigation li:first-child:after
+#navigation li:first-child:before
 {
 	content: "" !important;
 }
