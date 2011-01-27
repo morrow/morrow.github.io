@@ -10,7 +10,7 @@ var load = function(url)
 {
 	if("pushState" in window.history)
 	{
-		if(Math.abs(uri.history.indexOf(url)) - Math.abs(uri.history.indexOf(uri.current)) <= 1 || window.location.hash)
+		if(uri.history.indexOf(url) == uri.history.indexOf(uri.current)) - 1 || (uri.history.indexOf(url) == uri.history.indexOf(uri.current)) + 1 || window.location.hash)
 		{
 			window.history.replaceState({id:url}, url, url);
 
