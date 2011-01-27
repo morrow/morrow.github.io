@@ -37,6 +37,7 @@ var load = function(url)
 	{
 		url += ".html";
 	}
+	console.log("/static" + url);
 	$.ajax(
 	{
 		type:"GET",
