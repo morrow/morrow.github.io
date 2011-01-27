@@ -13,7 +13,7 @@ var load = function(url)
 	uri.display = uri.display.split("/")[1];
 	if("pushState" in window.history)
 	{
-		if(uri.history.indexOf(url) == uri.history.length - 1 && false)
+		if(uri.history.indexOf(url) == uri.history.length - 2)
 		{
 			window.history.replaceState({id:url}, url, url);
 		}

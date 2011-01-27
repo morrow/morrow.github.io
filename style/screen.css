@@ -98,9 +98,11 @@ a:hover
 
 #links li:before
 {
+	display:inline-block;
 	content: " - ";
 }
 #links li:first-child:before
 {
+	display:inline-block;
 	content:"" !important;	
 }
