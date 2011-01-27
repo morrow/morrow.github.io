@@ -32,6 +32,7 @@ var load = function(url)
 	uri.current = url;
 	uri.display = uri.current.split("#!")[1] || uri.current;
 	uri.display = uri.display.split("/")[1];
+	console.log("/static" + url)
 	$.ajax(
 	{
 		type:"GET",
