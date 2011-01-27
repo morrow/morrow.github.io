@@ -77,7 +77,7 @@ window.onhashchange = function()
 if("pushState" in window.history)
 {
 	window.onpopstate = function(e){
-		window.location.href.split(window.location.host)[1]	
+		load(window.location.href.split(window.location.host)[1]);
 	};
 }
 
