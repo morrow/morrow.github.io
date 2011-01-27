@@ -23,7 +23,7 @@ var load = function(url)
 		"url":"/static" + url,
 		success: function(r) {
 			$("#content").html(r);
-			$("#navigation-current").html('<li> &rsquo; </li><li><a href="'+uri.display+'">'+uri.display+'</a></li>')
+			$("#navigation-current").html('<li> &rsdquo; </li><li><a href="'+uri.display+'">'+uri.display+'</a></li>')
 		},
 		error: function(r)
 		{
