@@ -93,7 +93,8 @@ a:hover
 #content
 {
 	background:white;
-	padding:10px;
+	padding:15px 10px;
+	min-height:150px;
 }
 
 #links li:before
