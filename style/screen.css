@@ -54,7 +54,8 @@ a:hover
 
 #middleground > *
 {
-	width:80%;
+	width:85%;
+	min-width:750px;
 	margin:-1px auto;
 	border:1px solid #E6E6E6;
 	background:white;
