@@ -84,8 +84,8 @@ a:hover
 	
 }
 
-#navigation li a {
-	margin:5px;
+#navigation {
+	margin-top:5px;
 }
 
 #footer
