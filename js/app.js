@@ -34,7 +34,6 @@ var load = function(url)
 
 // bind Links
 $("a").live("click", function(e){
-	return true;
 	var _href = $(this).attr("href");
 	if(_href.match(window.location.host) || _href[0] == "/")
 	{
