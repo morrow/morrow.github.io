@@ -48,7 +48,6 @@ a:hover {
 }
 
 .items .website {
-  display:none;
   margin-right:2em;
   margin-top:1.9em;
   text-decoration:underline;
@@ -113,8 +112,11 @@ a:hover {
   margin:0em;
 }
 
-.category .icon {
+.icon {
   font-family:"Pictos";
+}
+
+.category .icon {
   margin-right:1em;
   color:#87CCF8;
 }

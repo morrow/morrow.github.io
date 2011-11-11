@@ -10,13 +10,9 @@ data = {
         },
         items: {
           "1": {
-            logo: "./images/leftronic.png",
-            name: "Leftronic",
-            website: "https://beta.leftronic.com/main/",
-            description: "Our software makes it incredibly easy to deploy powerful dashboards to track the data that matters most to your company.<br /> Whether you're tracking web engagement, sales, user activity, or server stats, our dashboards keep you up-to-date.",
-            links: {
-              hnsearch: "http://hnsearch.com/search?q=leftronic"
-            }
+            icon: "F",
+            name: "Résumé",
+            website: "http://morrow.github.com"
           },
           "2": {
             logo: "./images/kissmetrics.jpg",
@@ -26,7 +22,7 @@ data = {
           }
         }
       },
-      about: {
+      projects: {
         category: {
           icon: "i",
           name: "Projects"
