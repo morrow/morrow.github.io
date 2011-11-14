@@ -2,10 +2,13 @@ doctype html
 html
   head
     title Redirecting you
+    link(href="stylesheets/screen.css" rel="stylesheet")
   body
-    | Redirecting you to 
-    a(href="https://morrow.github.com/CSS-Reference") CSS Reference
-    | in less than 1 second...
+    .root
+      .header
+        | Redirecting you to 
+        a(href="https://morrow.github.com/CSS-Reference") CSS Reference
+        | in less than 1 second...
   javascript:
     var query = window.location.pathname.replace('/CSS-Reference', '');
     window.setTimeout("window.location.href = 'http://morrow.github.com/CSS-Reference/#'+ query;", 500)
