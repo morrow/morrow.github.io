@@ -10,8 +10,7 @@ data = {
         },
         items: {
           "1": {
-            icon: "F",
-            name: "Résumé",
+            logo: "Resume",
             website: "http://morrow.github.com"
           },
           "2": {
