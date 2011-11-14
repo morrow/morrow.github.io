@@ -4,7 +4,8 @@ html
     title Redirecting you
   body
     | Redirecting you to 
-    a(href="https://morrow.github.com/CSS-Reference") CSS Reference in 1 second...
+    a(href="https://morrow.github.com/CSS-Reference") CSS Reference
+    | in 1 second...
   javascript:
     var query = window.location.pathname.replace('/CSS-Reference', '');
     window.setTimeout("window.location.href = 'http://morrow.github.com/CSS-Reference/#'+ query;", 1000)
