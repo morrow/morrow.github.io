@@ -6,11 +6,12 @@
   </head>
   <body>
     <div class="root">
-      <div class="header">Redirecting you to <a href="https://morrow.github.com/CSS-Reference">CSS Reference</a>in less than 1 second...</div>
+      <div class="header">Redirecting you</div>
     </div>
   </body>
-  <script type="text/javascript">var repo = window.location.pathname.split('/')[1];
-    var query = window.location.pathname.replace('/' + repo + '/', '');
+  <script type="text/javascript">var path = window.location.pathname.split('/');
+    var repo = path[1];
+    var query = path[path.length-1];
     var url = [repo,'#',query].join('/');
     if(window.history.replaceState) {
       window.history.replaceState({},query,url);      

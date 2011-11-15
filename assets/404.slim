@@ -6,12 +6,11 @@ html
   body
     .root
       .header
-        | Redirecting you to 
-        a(href="https://morrow.github.com/CSS-Reference") CSS Reference
-        | in less than 1 second...
+        | Redirecting you
   javascript:
-    var repo = window.location.pathname.split('/')[1];
-    var query = window.location.pathname.replace('/' + repo + '/', '');
+    var path = window.location.pathname.split('/');
+    var repo = path[1];
+    var query = path[path.length-1];
     var url = [repo,'#',query].join('/');
     if(window.history.replaceState) {
       window.history.replaceState({},query,url);      
