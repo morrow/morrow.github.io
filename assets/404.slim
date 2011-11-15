@@ -10,8 +10,7 @@ html
         a(href="https://morrow.github.com/CSS-Reference") CSS Reference
         | in less than 1 second...
   javascript:
-    if (!(document.referrer.indexOf('morrow.github.com') > 0 )) {
-      var query = window.location.pathname.replace('/CSS-Reference', '');
-      var url = '/CSS-Reference/#'+ query;
-      window.location.href = url;
-    }
+    var query = window.location.pathname.replace('/CSS-Reference', '');
+    var url = '/CSS-Reference/#'+ query;
+    window.history.replaceState({},query,url);
+    window.location.href = url;
