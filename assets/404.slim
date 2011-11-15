@@ -9,7 +9,8 @@ html
         | Redirecting you in less than 1 second...
   javascript:
     if window.location.pathname.match(/css/) {
-      var query = window.location.pathname.replace('/CSS-Reference', '');
+      var query = window.location.pathname.toString().toLowerCase();
+      query = window.location.pathname.replace('/CSS-Reference', '');
       var url = '/CSS-Reference/#'+ query;
       if(window.history.replaceState) {
         window.history.replaceState({},query,url);      
