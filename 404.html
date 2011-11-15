@@ -9,9 +9,15 @@
       <div class="header">Redirecting you to <a href="https://morrow.github.com/CSS-Reference">CSS Reference</a>in less than 1 second...</div>
     </div>
   </body>
-  <script type="text/javascript">var query = window.location.pathname.replace('/CSS-Reference', '');
-    var url = '/CSS-Reference/#'+ query;
-    window.history.replaceState({},query,url);
-    window.location.href = url;
-    window.location.reload();</script>
+  <script type="text/javascript">var repo = window.location.pathname.split('/')[1];
+    var query = window.location.pathname.replace('/' + repo + '/', '');
+    var url = [repo,'#',query].join('/');
+    if(window.history.replaceState) {
+      window.history.replaceState({},query,url);      
+      window.location.href = url;
+      window.location.reload();
+    }
+    else {
+      window.setTimeout(function(){window.location.href = url;}, 999)
+    }</script>
 </html>
