@@ -6,34 +6,22 @@
   </head>
   <body>
     <div class="root">
-      <div class="header">Redirecting you</div>
+      <div class="header">Redirecting you in less than 1 second...</div>
     </div>
   </body>
-  <script type="text/javascript">var path = window.location.pathname.split('/');
-    if(path.length > 1) {
-      var repo = path[1];
-      var query = path[path.length-1];
-      var url = [repo,'#',query].join('/');
-    }
-    else if(path.length == 1) {
-      var urls = {'css-reference':'CSS-Reference'}
-      var query = path[path.length-1];
-      if(url in urls) {
-        var url = urls[url];
-      }
-    }
-    if(!(url)) {
-      window.location.href = 'http://morrow.github.com';      
-    }
-    else {
-      alert(url);
+  <script type="text/javascript">if window.location.pathname.match(/css/) {
+      var query = window.location.pathname.replace('/CSS-Reference', '');
+      var url = '/CSS-Reference/#'+ query;
       if(window.history.replaceState) {
         window.history.replaceState({},query,url);      
         window.location.href = url;
         window.location.reload();
       }
       else {
-        window.setTimeout(function(){window.location.href = url;}, 999)
+        window.setTimeout('window.location.href = ' + url, 999)
       }
+    }
+    else {
+      window.location.href = 'http://morrow.github.com/#/' + window.location.pathname;
     }</script>
 </html>
