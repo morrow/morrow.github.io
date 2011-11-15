@@ -12,5 +12,6 @@ html
   javascript:
     if (!(document.referrer.indexOf('morrow.github.com') > 0 )) {
       var query = window.location.pathname.replace('/CSS-Reference', '');
-      window.history.replaceState({}, query, '/CSS-Reference/#'+ query)
+      var url = '/CSS-Reference/#'+ query;
+      window.location.href = url;
     }
