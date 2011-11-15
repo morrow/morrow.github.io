@@ -10,9 +10,9 @@ html
         a(href="http://morrow.github.com") go to morrow.github.com
         a(href="https://github.com/morrow") go to github.com/morrow
   javascript:
-    if(window.location.pathname.match(/css/)) {
-      var query = window.location.pathname.toString().toLowerCase();
-      query = window.location.pathname.replace('/CSS-Reference', '');
+    var query = window.location.pathname.toString().toLowerCase();
+    if(query.match(/css/)) {
+      query = window.location.pathname.replace('/CSS-Reference/', '');
       var url = '/CSS-Reference/#'+ query;
       if(window.history.replaceState) {
         window.history.replaceState({},query,url);      
