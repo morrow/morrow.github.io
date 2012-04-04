@@ -10,10 +10,16 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">var query = window.location.pathname.toString().toLowerCase();
-    if(query.match(/css/)) {
-      query = window.location.pathname.replace('/CSS-Reference/', '');
-      var url = '/CSS-Reference/#'+ query;
+  <script type="text/javascript">
+    var query = window.location.pathname.toString().toLowerCase();
+    if(query.match(/css|clock/i)) {
+      if(query.match(/clock/i) {
+        var replace = '/CSS-Reference/;
+      } else {
+        var replace = '/Life-Clock/';
+      }
+      query = window.location.pathname.replace(replace, '');
+      var url = replace + '#'+ query;
       if(window.history.replaceState) {
         window.history.replaceState({},query,url);      
         window.location.href = url;
