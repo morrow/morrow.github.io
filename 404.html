@@ -14,19 +14,17 @@
     var query = window.location.pathname.toString().toLowerCase();
     if(query.match(/css|clock/i)) {
       if(query.match(/css/i)) {
-        var replace = '/CSS-Reference/';
+        var actual = '/CSS-Reference/';
       } else {
-        var replace = '/Life-Clock/';
+        var actual = '/Life-Clock/';
       }
-      query = window.location.pathname.replace(replace, '');
-      var url = replace + '#'+ query;
       if(window.history.replaceState) {
-        window.history.replaceState({},query,url);      
-        window.location.href = url;
+        window.history.replaceState({},actual,actual);      
+        window.location.href = actual;
         window.location.reload();
       }
       else {
-        window.setTimeout('window.location.href = ' + url, 999)
+        window.setTimeout('window.location.href = ' + actual, 999)
       }
     }
     else {
