@@ -10,17 +10,21 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">var query = window.location.pathname.toString().toLowerCase();
-    if(query.match(/css/)) {
-      query = window.location.pathname.replace('/CSS-Reference/', '');
-      var url = '/CSS-Reference/#'+ query;
+  <script type="text/javascript">
+    var query = window.location.pathname.toString().toLowerCase();
+    if(query.match(/css|clock/i)) {
+      if(query.match(/css/i)) {
+        var actual = '/CSS-Reference/';
+      } else {
+        var actual = '/Life-Clock/';
+      }
       if(window.history.replaceState) {
-        window.history.replaceState({},query,url);      
-        window.location.href = url;
+        window.history.replaceState({},actual,actual);      
+        window.location.href = actual;
         window.location.reload();
       }
       else {
-        window.setTimeout('window.location.href = ' + url, 999)
+        window.setTimeout('window.location.href = ' + actual, 999)
       }
     }
     else {
