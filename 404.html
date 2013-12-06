@@ -21,7 +21,7 @@
       if(window.history.replaceState) {
         window.history.replaceState({},actual,actual);      
         window.location.href = actual;
-        //window.location.reload();
+        window.location.reload();
       }
       else {
         window.setTimeout('window.location.href = ' + actual, 999)
