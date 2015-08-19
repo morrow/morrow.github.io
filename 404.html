@@ -6,20 +6,22 @@
   </head>
   <body>
     <div class="root">
-      <div class="header">Redirecting you in less than 1 second... <a href="http://morrow.github.com">go to morrow.github.com</a><a href="https://github.com/morrow">go to github.com/morrow</a>
+      <div class="header">Redirecting you in less than 1 second... <a href="http://morrow.github.io">go to morrow.github.io</a><a href="https://github.com/morrow">go to github.com/morrow</a>
       </div>
     </div>
   </body>
   <script type="text/javascript">
     var query = window.location.pathname.toString().toLowerCase();
-    if(query.match(/css|clock/i)) {
+    if(query.match(/css|clock|gif/i)) {
       if(query.match(/css/i)) {
         var actual = '/css-reference/';
-      } else {
+      } else if(query.match(/polar|clock) {
         var actual = '/polar-clock/';
+      } else if(query.match(/gif|viewer){
+        var actual = '/gif-viewer/';
       }
       if(window.history.replaceState) {
-        window.history.replaceState({},actual,actual);      
+        window.history.replaceState({},actual,actual);
         window.location.href = actual;
         window.location.reload();
       }
@@ -28,6 +30,6 @@
       }
     }
     else {
-      window.location.href = 'http://morrow.github.com/#/' + window.location.pathname;
+      window.location.href = 'http://morrow.github.io/#/' + window.location.pathname;
     }</script>
 </html>
